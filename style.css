@@ -18,3 +18,14 @@ b {
 img {
     position: fixed;  
 }
+.one {
+    padding-left: 1000px;
+    padding-top: 400px;
+}
+.two {
+    padding-left: 900px;
+}
+.three {
+    padding-left: 50px;
+    padding-top: 300px;
+}
