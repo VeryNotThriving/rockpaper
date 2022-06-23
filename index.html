@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+</div>
+<div>
+    <h2>Welcome to <b>ULTIMATE</b> Rock, Paper, Scissors!!!</h2>
+    <p id="directions-text">In this game you play rock(r) paper(p) or scissors(s)
+        <br> Each option has an advantage and a disadvantage so only luck can help you here<br>
+        <br>Rock beats Scissors
+        <br>Scissors beats Paper
+        <br>Paper beats Rock<br>
+        <br>Press r, p or s to start</p>
+    <p id="userchoice-text"></p>
+    <p id="computerchoice-text"></p>
+    <p id="wins-text"></p>
+    <p id="losses-text"></p>
+    <p id="ties-text"></p>
+</div>
+
+
+<script type="text/javascript">
+
+    var options = ['r','p','s'];
+
+    var wins = 0;
+    var losses = 0;
+    var ties = 0;
+
+    var directionsText = document.getElementById("directions-text");
+    var userChoiceText = document.getElementById("userchoice-text");
+    var winsText = document.getElementById("wins-text");
+    var tiesText = document.getElementById("ties-text");
+    var lossesText = document.getElementById("losses-text");
+
+    document.onkeyup = function(event) {
+    console.log(event.key)
+    var playerSelection = event.key
+  
+    
+
+    var computerChoice = options[Math.floor(Math.random() * options.length)]; 
+
+  
+    if ((playerSelection === "r") || (playerSelection === "p") || (playerSelection === "s")) {
+        directionsText.textContent="";
+
+        document.getElementById("userchoice-text").innerText = "User Guess: "+playerSelection;
+        document.getElementById("computerchoice-text").innerText = "Computer Guess: "+computerChoice;
+        
+        tiesText.textContent = "ties: "+ties
+        winsText.textContent = "wins: "+wins
+        lossesText.textContent = "losses: "+losses
+        // ties
+        if (playerSelection === computerChoice){
+            tiesText.textContent = "ties: "+ties++
+        }
+
+        //all possible wins
+        if (playerSelection === "r" & computerChoice === "s"){
+            winsText.textContent = "wins: "+wins++
+        }
+        if (playerSelection === "p" & computerChoice === "r"){
+            winsText.textContent = "wins: "+wins++
+        }
+        if (playerSelection === "s" & computerChoice === "p"){
+            winsText.textContent = "wins: "+wins++
+        }
+
+        //all possible losses
+        if (playerSelection === "r" & computerChoice === "p"){
+            lossesText.textContent = "losses: "+losses++
+        }
+        if (playerSelection === "p" & computerChoice === "s"){
+            lossesText.textContent = "losses: "+losses++
+        }
+        if (playerSelection === "s" & computerChoice === "r"){
+            lossesText.textContent = "losses: "+losses++
+        }
+    }
+    else {
+        alert("Only r,p,s can be selected")
+    }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+html {
+    background-color: blue;
+}
+
+div {
+    color: greenyellow;
+    text-align: center;
+    background-image: url(https://thumbs.dreamstime.com/b/fire-flames-38230902.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    transform: rotate(100deg);
+    height: 500px;
+}
+b {
+    font-family: cursive;
+}
