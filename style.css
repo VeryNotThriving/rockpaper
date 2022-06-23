@@ -8,9 +8,13 @@ div {
     background-image: url(https://thumbs.dreamstime.com/b/fire-flames-38230902.jpg);
     background-size: contain;
     background-repeat: repeat;
-    transform: rotate(100deg);
+    transform: rotate(80deg);
     height: 500px;
 }
 b {
     font-family: cursive;
+    color: rgb(114, 54, 14);
+}
+img {
+    position: fixed;  
 }
