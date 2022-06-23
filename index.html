@@ -59,11 +59,15 @@
         document.getElementById("userchoice-text").innerText = "User Guess: "+playerSelection;
         document.getElementById("computerchoice-text").innerText = "Computer Guess: "+computerChoice;
         
-        tiesText.textContent = "ties: "+ties
-        winsText.textContent = "wins: "+wins
-        lossesText.textContent = "losses: "+losses
+        
         // ties
-        if (playerSelection === computerChoice){
+        if (playerSelection === "r" & computerChoice === "r"){
+            tiesText.textContent = "ties: "+ties++
+        }
+        if (playerSelection === "p" & computerChoice === "p"){
+            tiesText.textContent = "ties: "+ties++
+        }
+        if (playerSelection === "s" & computerChoice === "s"){
             tiesText.textContent = "ties: "+ties++
         }
 
